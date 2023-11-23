@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Classificador</title>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h2 class="mb-4">Trabalho Classificador</h2>
+        <form method="POST" action="/" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="classifier">Classificador</label>
+                <select class="form-control" name="classifier" required>
+                    <option value="RL">Regressão Logística</option>
+                    <option value="KNN">KNN</option>
+                    <!-- Adicione mais opções conforme necessário -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="param1">Parâmetro KNN 1</label>
+                <input type="number" class="form-control" name="param1" required>
+            </div>
+            <div class="form-group">
+                <label for="param2">Parâmetro KNN 2</label>
+                <input type="number" class="form-control" name="param2" required>
+            </div>
+            <div class="form-group">
+                <label for="param3">Parâmetro KNN 3</label>
+                <input type="number" class="form-control" name="param3" required>
+            </div>
+            <div class="form-group">
+                <label for="csv_file">Arquivo CSV</label>
+                <input type="file" class="form-control-file" name="csv_file" accept=".csv" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Rodar Classificador</button>
+        </form>
+    </div>
+</body>
+</html>
